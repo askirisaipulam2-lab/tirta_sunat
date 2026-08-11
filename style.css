@@ -1,0 +1,1273 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f4ed;
+    color: #1c2924;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --green-dark: #17352c;
+    --green: #315c4d;
+    --green-light: #6f927e;
+
+    --cream: #f7f4ed;
+    --cream-dark: #ebe5d8;
+
+    --gold: #b99a5b;
+    --gold-light: #d8c18c;
+
+    --text: #1c2924;
+    --white: #ffffff;
+
+    --serif: "Cormorant Garamond", serif;
+}
+
+
+/* =========================================
+   MUSIC BUTTON
+========================================= */
+
+.music-button {
+    position: fixed;
+
+    right: 20px;
+    top: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.4);
+
+    background: rgba(23,53,44,.85);
+
+    color: white;
+
+    z-index: 1000;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition: .3s;
+}
+
+.music-button:hover {
+    transform: scale(1.08);
+}
+
+.music-playing {
+    animation: rotateMusic 3s linear infinite;
+}
+
+@keyframes rotateMusic {
+
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(10, 30, 24, .65),
+            rgba(10, 30, 24, .82)
+        ),
+        url("assets/anak.jpg")
+        center / cover no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* Islamic pattern */
+
+.islamic-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .08;
+
+    background-image:
+        radial-gradient(
+            circle at center,
+            transparent 30%,
+            rgba(255,255,255,.5) 31%,
+            transparent 32%
+        );
+
+    background-size: 70px 70px;
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding: 40px 20px;
+
+    animation: heroFade 1.5s ease forwards;
+}
+
+@keyframes heroFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.small-title {
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+    opacity: .9;
+}
+
+
+.ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    color: var(--gold-light);
+
+    margin-bottom: 20px;
+}
+
+.ornament span {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: var(--gold-light);
+}
+
+
+.subtitle {
+
+    text-transform: uppercase;
+
+    letter-spacing: 6px;
+
+    font-size: 13px;
+
+    color: var(--gold-light);
+
+    margin-bottom: 10px;
+}
+
+
+.hero h1 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(70px, 12vw, 130px);
+
+    line-height: .78;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+
+    font-style: italic;
+
+    color: var(--gold-light);
+}
+
+
+.hero-date {
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 40px;
+}
+
+
+.open-button {
+
+    padding: 15px 30px;
+
+    border: 1px solid rgba(255,255,255,.4);
+
+    border-radius: 100px;
+
+    background: rgba(255,255,255,.1);
+
+    color: white;
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: .4s;
+}
+
+.open-button span {
+
+    color: var(--gold-light);
+
+    margin: 0 8px;
+}
+
+.open-button:hover {
+
+    background: white;
+
+    color: var(--green-dark);
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    opacity: .7;
+}
+
+.scroll-line {
+
+    width: 1px;
+
+    height: 45px;
+
+    background: white;
+
+    margin: 10px auto 0;
+
+    animation: scrollLine 2s infinite;
+}
+
+@keyframes scrollLine {
+
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+    51% {
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 110px 30px;
+}
+
+
+.section-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.section-label span {
+
+    width: 30px;
+
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+.section-title {
+
+    font-family: var(--serif);
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    margin-bottom: 20px;
+}
+
+.section-description {
+
+    max-width: 500px;
+
+    color: #68736d;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    text-align: center;
+
+    max-width: 850px;
+}
+
+.intro .section-label {
+
+    justify-content: center;
+}
+
+.intro-content {
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.arabic {
+
+    font-size: 28px;
+
+    line-height: 2;
+
+    margin-bottom: 30px;
+
+    color: var(--green);
+}
+
+.opening-text {
+
+    font-family: var(--serif);
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.intro-content > p:last-child {
+
+    line-height: 1.9;
+
+    color: #65716b;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.profile-image {
+
+    position: relative;
+
+    max-width: 430px;
+
+    margin: auto;
+}
+
+.profile-image img {
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 220px 220px 10px 10px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.image-frame {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 220px 220px 10px 10px;
+
+    top: 15px;
+
+    left: 15px;
+}
+
+
+.small-label {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold);
+}
+
+.profile-info h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(60px, 8vw, 100px);
+
+    line-height: .8;
+
+    font-weight: 500;
+
+    margin: 20px 0;
+}
+
+.birth {
+
+    color: #777;
+
+    margin-bottom: 5px;
+}
+
+.parents {
+
+    font-family: var(--serif);
+
+    font-size: 25px;
+}
+
+.mini-ornament {
+
+    color: var(--gold);
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   EVENT
+========================================= */
+
+.event {
+
+    text-align: center;
+}
+
+.event .section-label {
+
+    justify-content: center;
+}
+
+.event .section-description {
+
+    margin: auto;
+
+    margin-bottom: 50px;
+}
+
+
+.event-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.event-card {
+
+    background: white;
+
+    padding: 45px 25px;
+
+    border: 1px solid #e5dfd2;
+
+    transition: .4s;
+}
+
+.event-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 50px rgba(30,50,40,.08);
+}
+
+.event-icon {
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+.event-card span {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--gold);
+
+    margin-bottom: 10px;
+}
+
+.event-card strong {
+
+    display: block;
+
+    font-family: var(--serif);
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+.event-card p {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown-section {
+
+    background: var(--green-dark);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.countdown-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border: 1px solid rgba(255,255,255,.05);
+
+    border-radius: 50%;
+
+    left: -200px;
+
+    top: -200px;
+}
+
+.countdown-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border: 1px solid rgba(255,255,255,.05);
+
+    border-radius: 50%;
+
+    right: -200px;
+
+    bottom: -300px;
+}
+
+
+.section-label.light {
+
+    justify-content: center;
+
+    color: var(--gold-light);
+}
+
+.countdown-section h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    font-weight: 500;
+
+    margin-bottom: 50px;
+}
+
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.count-box {
+
+    width: 110px;
+
+    padding: 20px 10px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    background: rgba(255,255,255,.04);
+
+    backdrop-filter: blur(10px);
+}
+
+.count-box strong {
+
+    display: block;
+
+    font-family: var(--serif);
+
+    font-size: 50px;
+
+    font-weight: 500;
+}
+
+.count-box span {
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #bfc9c4;
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.location {
+
+    max-width: 1100px;
+}
+
+.map-wrapper {
+
+    margin-top: 50px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 20px 50px rgba(20,40,30,.12);
+}
+
+.map-wrapper iframe {
+
+    display: block;
+}
+
+
+.location-info {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.location-info > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.location-info > div > span {
+
+    font-size: 25px;
+}
+
+.location-info strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+.location-info p {
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+.map-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: var(--green-dark);
+
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 100px;
+
+    font-size: 12px;
+
+    transition: .3s;
+}
+
+.map-button:hover {
+
+    background: var(--green);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-grid {
+
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr;
+
+    grid-template-rows: 300px 300px;
+
+    gap: 15px;
+}
+
+.gallery-item {
+
+    overflow: hidden;
+}
+
+.gallery-item.large {
+
+    grid-row: span 2;
+}
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .6s;
+}
+
+.gallery-item:hover img {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   RSVP
+========================================= */
+
+.rsvp-section {
+
+    text-align: center;
+
+    padding: 110px 25px;
+
+    background:
+        linear-gradient(
+            rgba(23,53,44,.92),
+            rgba(23,53,44,.96)
+        ),
+        url("assets/foto1.jpg")
+        center / cover;
+
+    color: white;
+}
+
+.rsvp-section h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(50px, 7vw, 80px);
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.rsvp-section > p {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    color: #d0d8d3;
+
+    margin-bottom: 35px;
+}
+
+.whatsapp-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 16px 28px;
+
+    background: white;
+
+    color: var(--green-dark);
+
+    border-radius: 100px;
+
+    font-weight: 600;
+
+    font-size: 13px;
+
+    transition: .3s;
+}
+
+.whatsapp-button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.2);
+}
+
+
+/* =========================================
+   CLOSING
+========================================= */
+
+.closing {
+
+    text-align: center;
+
+    max-width: 750px;
+}
+
+.closing-ornament {
+
+    color: var(--gold);
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.closing h2 {
+
+    font-family: var(--serif);
+
+    font-size: 70px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.closing > p:not(.arabic):not(.wassalam) {
+
+    line-height: 1.9;
+
+    color: #6c766f;
+}
+
+.wassalam {
+
+    margin-top: 30px;
+
+    font-family: var(--serif);
+
+    font-size: 25px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #10251f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.footer-ornament {
+
+    color: var(--gold);
+
+    margin-bottom: 15px;
+}
+
+footer p {
+
+    font-family: var(--serif);
+
+    font-size: 25px;
+
+    color: #c5cec9;
+}
+
+footer strong {
+
+    display: block;
+
+    font-family: var(--serif);
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+    margin: 5px 0 30px;
+}
+
+footer small {
+
+    font-size: 10px;
+
+    color: #718079;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .section {
+
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+
+        font-size: 75px;
+    }
+
+    .profile {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        text-align: center;
+    }
+
+    .profile-image {
+
+        max-width: 320px;
+    }
+
+    .event-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .countdown {
+
+        gap: 7px;
+    }
+
+    .count-box {
+
+        width: 75px;
+
+        padding: 15px 5px;
+    }
+
+    .count-box strong {
+
+        font-size: 35px;
+    }
+
+    .count-box span {
+
+        font-size: 7px;
+    }
+
+    .location-info {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .map-button {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: 220px 220px;
+    }
+
+    .gallery-item.large {
+
+        grid-column: span 2;
+
+        grid-row: span 1;
+    }
+
+    .gallery-item {
+
+        grid-row: auto !important;
+    }
+
+    .closing h2 {
+
+        font-size: 55px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+
+        font-size: 65px;
+    }
+
+    .hero-date {
+
+        font-size: 12px;
+    }
+
+    .count-box {
+
+        width: 68px;
+    }
+
+    .count-box strong {
+
+        font-size: 30px;
+    }
+
+    .arabic {
+
+        font-size: 22px;
+    }
+
+}
