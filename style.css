@@ -1271,3 +1271,633 @@ footer small {
     }
 
 }
+
+/* =========================================
+   ANAK MENGINTIP
+========================================= */
+
+.peek-kids {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 999;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   KARAKTER
+========================================= */
+
+.peek-boy {
+    position: absolute;
+
+    width: 125px;
+    height: 225px;
+
+    bottom: -15px;
+
+    opacity: 0;
+
+    transform-origin: bottom center;
+
+    filter:
+        drop-shadow(
+            0 12px 12px rgba(0,0,0,.18)
+        );
+}
+
+
+/* =========================================
+   POSISI KIRI
+========================================= */
+
+.peek-boy-left {
+    left: -75px;
+
+    animation:
+        peekLeft
+        3.5s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================
+   POSISI KANAN
+========================================= */
+
+.peek-boy-right {
+    right: -75px;
+
+    animation:
+        peekRight
+        3.5s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================
+   KEPALA
+========================================= */
+
+.boy-head {
+    position: absolute;
+
+    width: 82px;
+    height: 88px;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #c98d68;
+
+    border-radius:
+        48% 48%
+        45% 45%;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   PECI
+========================================= */
+
+.peci {
+    position: absolute;
+
+    width: 78px;
+    height: 38px;
+
+    left: 50%;
+    top: -17px;
+
+    transform: translateX(-50%);
+
+    background: #111713;
+
+    border-radius:
+        45% 45%
+        18% 18%;
+
+    z-index: 10;
+
+    box-shadow:
+        inset 0 -4px 0 rgba(255,255,255,.05);
+}
+
+
+/* Garis peci */
+
+.peci-line {
+    position: absolute;
+
+    width: 100%;
+    height: 4px;
+
+    bottom: 5px;
+
+    background: #28322d;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   RAMBUT
+========================================= */
+
+.boy-hair {
+    position: absolute;
+
+    width: 84px;
+    height: 38px;
+
+    top: 7px;
+    left: -1px;
+
+    background: #17221e;
+
+    border-radius:
+        50% 50%
+        30% 20%;
+
+    opacity: .85;
+}
+
+
+/* =========================================
+   MATA
+========================================= */
+
+.boy-eye {
+    position: absolute;
+
+    width: 7px;
+    height: 9px;
+
+    top: 49px;
+
+    background: #17221e;
+
+    border-radius: 50%;
+
+    animation:
+        blink
+        4s
+        infinite;
+}
+
+.boy-eye.left {
+    left: 22px;
+}
+
+.boy-eye.right {
+    right: 22px;
+}
+
+
+/* =========================================
+   SENYUM
+========================================= */
+
+.boy-mouth {
+    position: absolute;
+
+    width: 20px;
+    height: 10px;
+
+    left: 50%;
+    top: 65px;
+
+    transform: translateX(-50%);
+
+    border-bottom:
+        3px solid #783f35;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   LEHER
+========================================= */
+
+.boy-neck {
+    position: absolute;
+
+    width: 25px;
+    height: 20px;
+
+    top: 77px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #bd805e;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   BADAN BAJU KOKO
+========================================= */
+
+.boy-body {
+    position: absolute;
+
+    width: 100px;
+    height: 110px;
+
+    top: 88px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #eee8d8;
+
+    border-radius:
+        30px 30px
+        8px 8px;
+
+    z-index: 3;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(0,0,0,.04);
+}
+
+
+/* =========================================
+   KERAH
+========================================= */
+
+.boy-collar {
+    position: absolute;
+
+    width: 38px;
+    height: 30px;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-left:
+        2px solid #c2b9a5;
+
+    border-right:
+        2px solid #c2b9a5;
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            65% 100%,
+            35% 100%
+        );
+}
+
+
+/* =========================================
+   KANCING
+========================================= */
+
+.boy-button {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    background: #8d8068;
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 42px;
+
+    transform: translateX(-50%);
+}
+
+.boy-button.button-2 {
+    top: 57px;
+}
+
+
+/* =========================================
+   TANGAN
+========================================= */
+
+.boy-arm {
+    position: absolute;
+
+    width: 25px;
+    height: 75px;
+
+    top: 95px;
+
+    background: #c98d68;
+
+    border-radius: 20px;
+
+    z-index: 2;
+
+    transform-origin:
+        50% 10%;
+}
+
+
+/* =========================================
+   TANGAN MELAMBAI
+========================================= */
+
+.waving-arm {
+    right: -2px;
+
+    transform:
+        rotate(-45deg);
+
+    animation:
+        waving
+        .7s
+        ease-in-out
+        infinite;
+}
+
+
+/* Tangan anak kanan */
+
+.peek-boy-right .waving-arm {
+    left: -2px;
+    right: auto;
+
+    transform:
+        rotate(45deg);
+
+    animation:
+        wavingRight
+        .7s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================
+   ANIMASI LAMBAI KIRI
+========================================= */
+
+@keyframes waving {
+
+    0%,
+    100% {
+        transform:
+            rotate(-45deg);
+    }
+
+    50% {
+        transform:
+            rotate(-15deg);
+    }
+
+}
+
+
+/* =========================================
+   ANIMASI LAMBAI KANAN
+========================================= */
+
+@keyframes wavingRight {
+
+    0%,
+    100% {
+        transform:
+            rotate(45deg);
+    }
+
+    50% {
+        transform:
+            rotate(15deg);
+    }
+
+}
+
+
+/* =========================================
+   ANAK KIRI NGINTIP BOLAK-BALIK
+========================================= */
+
+@keyframes peekLeft {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateX(-80px)
+            rotate(-8deg);
+    }
+
+    15% {
+        opacity: 1;
+
+        transform:
+            translateX(45px)
+            rotate(3deg);
+    }
+
+    30% {
+        transform:
+            translateX(0)
+            rotate(0);
+    }
+
+    55% {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            rotate(0);
+    }
+
+    75% {
+        opacity: 1;
+
+        transform:
+            translateX(45px)
+            rotate(3deg);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateX(-80px)
+            rotate(-8deg);
+    }
+
+}
+
+
+/* =========================================
+   ANAK KANAN NGINTIP BOLAK-BALIK
+========================================= */
+
+@keyframes peekRight {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateX(80px)
+            rotate(8deg);
+    }
+
+    15% {
+        opacity: 1;
+
+        transform:
+            translateX(-45px)
+            rotate(-3deg);
+    }
+
+    30% {
+        transform:
+            translateX(0)
+            rotate(0);
+    }
+
+    55% {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            rotate(0);
+    }
+
+    75% {
+        opacity: 1;
+
+        transform:
+            translateX(-45px)
+            rotate(-3deg);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateX(80px)
+            rotate(8deg);
+    }
+
+}
+
+
+/* =========================================
+   KEDIP
+========================================= */
+
+@keyframes blink {
+
+    0%,
+    90%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    94% {
+        transform: scaleY(.1);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .peek-boy {
+        width: 85px;
+        height: 160px;
+    }
+
+    .boy-head {
+        width: 60px;
+        height: 65px;
+    }
+
+    .peci {
+        width: 58px;
+        height: 28px;
+
+        top: -13px;
+    }
+
+    .boy-hair {
+        width: 62px;
+        height: 28px;
+
+        top: 5px;
+    }
+
+    .boy-eye {
+        width: 5px;
+        height: 7px;
+
+        top: 37px;
+    }
+
+    .boy-eye.left {
+        left: 16px;
+    }
+
+    .boy-eye.right {
+        right: 16px;
+    }
+
+    .boy-mouth {
+        top: 49px;
+
+        width: 15px;
+        height: 7px;
+    }
+
+    .boy-neck {
+        top: 58px;
+
+        width: 18px;
+        height: 15px;
+    }
+
+    .boy-body {
+        width: 70px;
+        height: 75px;
+
+        top: 68px;
+    }
+
+    .boy-arm {
+        width: 18px;
+        height: 55px;
+
+        top: 75px;
+    }
+
+    .peek-boy-left {
+        left: -50px;
+    }
+
+    .peek-boy-right {
+        right: -50px;
+    }
+
+}

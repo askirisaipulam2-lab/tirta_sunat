@@ -1,510 +1,436 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description"
-          content="Undangan Walimatul Khitan Tirta Jaya">
+    <meta name="description" content="Undangan Walimatul Khitan Tirta Jaya" />
 
     <title>Walimatul Khitan — Tirta Jaya</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- =========================================
+     ANAK MENGINTIP + PECI + LAMBAI
+========================================= -->
+
+    <div class="peek-kids">
+      <!-- ANAK KIRI -->
+      <div class="peek-boy peek-boy-left">
+        <div class="boy-head">
+          <!-- PECI -->
+          <div class="peci">
+            <div class="peci-line"></div>
+          </div>
+
+          <!-- RAMBUT -->
+          <div class="boy-hair"></div>
+
+          <!-- WAJAH -->
+          <div class="boy-eye left"></div>
+          <div class="boy-eye right"></div>
+
+          <div class="boy-mouth"></div>
+        </div>
+
+        <div class="boy-neck"></div>
+
+        <!-- BADAN -->
+        <div class="boy-body">
+          <div class="boy-collar"></div>
+          <div class="boy-button"></div>
+          <div class="boy-button button-2"></div>
+        </div>
+
+        <!-- TANGAN MELAMBAI -->
+        <div class="boy-arm waving-arm"></div>
+      </div>
+
+      <!-- ANAK KANAN -->
+      <div class="peek-boy peek-boy-right">
+        <div class="boy-head">
+          <!-- PECI -->
+          <div class="peci">
+            <div class="peci-line"></div>
+          </div>
+
+          <!-- RAMBUT -->
+          <div class="boy-hair"></div>
+
+          <!-- WAJAH -->
+          <div class="boy-eye left"></div>
+          <div class="boy-eye right"></div>
+
+          <div class="boy-mouth"></div>
+        </div>
+
+        <div class="boy-neck"></div>
+
+        <!-- BADAN -->
+        <div class="boy-body">
+          <div class="boy-collar"></div>
+          <div class="boy-button"></div>
+          <div class="boy-button button-2"></div>
+        </div>
+
+        <!-- TANGAN MELAMBAI -->
+        <div class="boy-arm waving-arm"></div>
+      </div>
+    </div>
 
     <!-- =========================================
          MUSIC
     ========================================== -->
 
     <audio id="backgroundMusic" loop>
-        <source src="plus/lagu.mp3" type="audio/mpeg">
+      <source src="plus/lagu.mp3" type="audio/mpeg" />
     </audio>
 
     <button class="music-button" id="musicButton">
-        <span id="musicIcon">♫</span>
+      <span id="musicIcon">♫</span>
     </button>
-
 
     <!-- =========================================
          HERO / COVER
     ========================================== -->
 
     <section class="hero" id="home">
+      <div class="hero-overlay"></div>
 
-        <div class="hero-overlay"></div>
+      <div class="islamic-pattern"></div>
 
-        <div class="islamic-pattern"></div>
+      <div class="hero-content">
+        <p class="small-title">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
 
-        <div class="hero-content">
-
-            <p class="small-title">
-                بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-            </p>
-
-            <div class="ornament">
-                <span></span>
-                ✦
-                <span></span>
-            </div>
-
-            <p class="subtitle">
-                Walimatul Khitan
-            </p>
-
-            <h1>
-                Tirta<br>
-                <span>Jaya</span>
-            </h1>
-
-            <p class="hero-date">
-                Minggu, 6 Desember 2026
-            </p>
-
-            <button class="open-button" onclick="openInvitation()">
-                <span>✦</span>
-                Buka Undangan
-                <span>✦</span>
-            </button>
-
+        <div class="ornament">
+          <span></span>
+          ✦
+          <span></span>
         </div>
 
-        <div class="scroll-indicator">
-            <span>Scroll untuk melihat undangan</span>
-            <div class="scroll-line"></div>
-        </div>
+        <p class="subtitle">Walimatul Khitan</p>
 
+        <h1>
+          Tirta<br />
+          <span>Jaya</span>
+        </h1>
+
+        <p class="hero-date">Minggu, 6 Desember 2026</p>
+
+        <button class="open-button" onclick="openInvitation()">
+          <span>✦</span>
+          Buka Undangan
+          <span>✦</span>
+        </button>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll untuk melihat undangan</span>
+        <div class="scroll-line"></div>
+      </div>
     </section>
-
 
     <!-- =========================================
          MAIN CONTENT
     ========================================== -->
 
     <main id="invitation">
-
-
-        <!-- =====================================
+      <!-- =====================================
              INTRO
         ====================================== -->
 
-        <section class="section intro reveal">
+      <section class="section intro reveal">
+        <div class="section-label">
+          <span>01</span>
+          THE INVITATION
+        </div>
 
-            <div class="section-label">
-                <span>01</span>
-                THE INVITATION
-            </div>
+        <div class="intro-content">
+          <p class="arabic">
+            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+          </p>
 
-            <div class="intro-content">
+          <p class="opening-text">
+            Assalamu'alaikum Warahmatullahi Wabarakatuh
+          </p>
 
-                <p class="arabic">
-                    وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ
-                    أَنفُسِكُمْ أَزْوَاجًا
-                </p>
+          <p>
+            Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang
+            Bapak/Ibu/Saudara/i untuk hadir dalam acara
+            <strong>Walimatul Khitan</strong>
+            putra kami.
+          </p>
+        </div>
+      </section>
 
-                <p class="opening-text">
-                    Assalamu'alaikum Warahmatullahi Wabarakatuh
-                </p>
-
-                <p>
-                    Dengan memohon rahmat dan ridho Allah SWT,
-                    kami bermaksud mengundang Bapak/Ibu/Saudara/i
-                    untuk hadir dalam acara <strong>Walimatul Khitan</strong>
-                    putra kami.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================
+      <!-- =====================================
              PROFILE ANAK
         ====================================== -->
 
-        <section class="section profile reveal">
+      <section class="section profile reveal">
+        <div class="profile-image">
+          <img src="plus/tirta.jpeg" alt="Foto Tirta Jaya" />
 
-            <div class="profile-image">
+          <div class="image-frame"></div>
+        </div>
 
-                <img src="plus/tirta.jpeg"
-                     alt="Foto Tirta Jaya">
+        <div class="profile-info">
+          <span class="small-label"> PUTRA KAMI </span>
 
-                <div class="image-frame"></div>
+          <h2>Tirta Jaya</h2>
 
-            </div>
+          <p class="birth">Putra dari</p>
 
-            <div class="profile-info">
+          <p class="parents">Bapak Akhyar & Ibu Tati</p>
 
-                <span class="small-label">
-                    PUTRA KAMI
-                </span>
+          <div class="mini-ornament">✦</div>
+        </div>
+      </section>
 
-                <h2>
-                    Tirta Jaya
-                </h2>
-
-                <p class="birth">
-                    Putra dari
-                </p>
-
-                <p class="parents">
-                    Bapak Akhyar & Ibu Tati
-                </p>
-
-                <div class="mini-ornament">
-                    ✦
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================
+      <!-- =====================================
              EVENT DETAILS
         ====================================== -->
 
-        <section class="section event reveal">
+      <section class="section event reveal">
+        <div class="section-label">
+          <span>02</span>
+          THE EVENT
+        </div>
 
-            <div class="section-label">
-                <span>02</span>
-                THE EVENT
-            </div>
+        <h2 class="section-title">Save The Date</h2>
 
-            <h2 class="section-title">
-                Save The Date
-            </h2>
+        <p class="section-description">
+          InsyaAllah acara akan dilaksanakan pada:
+        </p>
 
-            <p class="section-description">
-                InsyaAllah acara akan dilaksanakan pada:
+        <div class="event-grid">
+          <div class="event-card">
+            <div class="event-icon">🗓️</div>
+
+            <span> HARI & TANGGAL </span>
+
+            <strong> Minggu </strong>
+
+            <p>06 Desember 2026</p>
+          </div>
+
+          <div class="event-card">
+            <div class="event-icon">⏱️</div>
+
+            <span> WAKTU </span>
+
+            <strong> 09.00 WIB </strong>
+
+            <p>s/d selesai</p>
+          </div>
+
+          <div class="event-card">
+            <div class="event-icon">🏡</div>
+
+            <span> TEMPAT </span>
+
+            <strong> Kediaman Keluarga </strong>
+
+            <p>
+              Kp. Lontar RT/RW 07/02 Desa Lontar Kec. Kemiri Kab. Tangerang,
+              Banten
             </p>
+          </div>
+        </div>
+      </section>
 
-
-            <div class="event-grid">
-
-                <div class="event-card">
-
-                    <div class="event-icon">
-                        🗓️
-                    </div>
-
-                    <span>
-                        HARI & TANGGAL
-                    </span>
-
-                    <strong>
-                        Minggu
-                    </strong>
-
-                    <p>
-                        06 Desember 2026
-                    </p>
-
-                </div>
-
-
-                <div class="event-card">
-
-                    <div class="event-icon">
-                        ⏱️
-                    </div>
-
-                    <span>
-                        WAKTU
-                    </span>
-
-                    <strong>
-                        09.00 WIB
-                    </strong>
-
-                    <p>
-                        s/d selesai
-                    </p>
-
-                </div>
-
-
-                <div class="event-card">
-
-                    <div class="event-icon">
-                        🏡
-                    </div>
-
-                    <span>
-                        TEMPAT
-                    </span>
-
-                    <strong>
-                        Kediaman Keluarga
-                    </strong>
-
-                    <p>
-                        Kp. Lontar RT/RW 07/02 Desa Lontar Kec. Kemiri Kab. Tangerang, Banten
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================
+      <!-- =====================================
              COUNTDOWN
         ====================================== -->
 
-        <section class="countdown-section reveal">
+      <section class="countdown-section reveal">
+        <div class="section-label light">COUNTDOWN</div>
 
-            <div class="section-label light">
-                COUNTDOWN
-            </div>
+        <h2>Menuju Hari Bahagia</h2>
 
-            <h2>
-                Menuju Hari Bahagia
-            </h2>
+        <div class="countdown">
+          <div class="count-box">
+            <strong id="days">00</strong>
+            <span>Hari</span>
+          </div>
 
-            <div class="countdown">
+          <div class="count-box">
+            <strong id="hours">00</strong>
+            <span>Jam</span>
+          </div>
 
-                <div class="count-box">
-                    <strong id="days">00</strong>
-                    <span>Hari</span>
-                </div>
+          <div class="count-box">
+            <strong id="minutes">00</strong>
+            <span>Menit</span>
+          </div>
 
-                <div class="count-box">
-                    <strong id="hours">00</strong>
-                    <span>Jam</span>
-                </div>
+          <div class="count-box">
+            <strong id="seconds">00</strong>
+            <span>Detik</span>
+          </div>
+        </div>
+      </section>
 
-                <div class="count-box">
-                    <strong id="minutes">00</strong>
-                    <span>Menit</span>
-                </div>
-
-                <div class="count-box">
-                    <strong id="seconds">00</strong>
-                    <span>Detik</span>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================
+      <!-- =====================================
              LOCATION + GOOGLE MAPS
         ====================================== -->
 
-        <section class="section location reveal">
+      <section class="section location reveal">
+        <div class="section-label">
+          <span>03</span>
+          LOCATION
+        </div>
 
-            <div class="section-label">
-                <span>03</span>
-                LOCATION
+        <h2 class="section-title">Lokasi Acara</h2>
+
+        <p class="section-description">
+          Kami dengan senang hati menantikan kehadiran Bapak/Ibu/Saudara/i.
+        </p>
+
+        <div class="map-wrapper">
+          <!-- GOOGLE MAPS -->
+          <iframe
+            src="https://maps.google.com/?q=-6.071832,106.448728&z=15&output=embed"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+
+        <div class="location-info">
+          <div>
+            <span>📍</span>
+
+            <div>
+              <strong> Kediaman Keluarga </strong>
+
+              <p>
+                Jl. Plelangan Selatip, Kp. Lontar RT/RW 07/02 Desa Lontar Kec.
+                Kemiri Kab. Tangerang, Banten
+              </p>
             </div>
+          </div>
 
-            <h2 class="section-title">
-                Lokasi Acara
-            </h2>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=-6.071832,106.448728"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-button"
+          >
+            Buka Google Maps
+            <span>↗</span>
+          </a>
+        </div>
+      </section>
 
-            <p class="section-description">
-                Kami dengan senang hati menantikan kehadiran
-                Bapak/Ibu/Saudara/i.
-            </p>
-
-
-            <div class="map-wrapper">
-
-                <!-- GOOGLE MAPS -->
-                <iframe
-                    src="https://maps.google.com/?q=-6.071832,106.448728&z=15&output=embed"
-                    width="100%"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-
-            </div>
-
-
-            <div class="location-info">
-
-                <div>
-                    <span>📍</span>
-
-                    <div>
-                        <strong>
-                            Kediaman Keluarga
-                        </strong>
-
-                        <p>
-                            Jl. Plelangan Selatip, Kp. Lontar RT/RW 07/02 Desa Lontar Kec. Kemiri Kab. Tangerang, Banten
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <a
-                    href="https://maps.google.com/?q=-6.071832,106.448728&z=15&output=embed"
-                    target="_blank"
-                    class="map-button">
-
-                    Buka Google Maps
-                    <span>↗</span>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================
+      <!-- =====================================
              GALLERY
         ====================================== -->
 
-        <section class="section gallery reveal">
+      <section class="section gallery reveal">
+        <div class="section-label">
+          <span>04</span>
+          MEMORIES
+        </div>
 
-            <div class="section-label">
-                <span>04</span>
-                MEMORIES
-            </div>
+        <h2 class="section-title">Galeri</h2>
 
-            <h2 class="section-title">
-                Galeri
-            </h2>
+        <p class="section-description">
+          Beberapa momen kecil yang kami abadikan.
+        </p>
 
-            <p class="section-description">
-                Beberapa momen kecil yang kami abadikan.
-            </p>
+        <div class="gallery-grid">
+          <div class="gallery-item large">
+            <img src="plus/i.png" alt="Galeri 1" />
+          </div>
 
+          <div class="gallery-item">
+            <img src="plus/t.png" alt="Galeri 2" />
+          </div>
 
-            <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="plus/r.png" alt="Galeri 3" />
+          </div>
+        </div>
+      </section>
 
-                <div class="gallery-item large">
-                    <img src="plus/i.png"
-                         alt="Galeri 1">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="plus/t.png"
-                         alt="Galeri 2">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="plus/r.png"
-                         alt="Galeri 3">
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================
+      <!-- =====================================
              RSVP
         ====================================== -->
 
-        <section class="rsvp-section reveal">
+      <section class="rsvp-section reveal">
+        <div class="section-label light">RSVP</div>
 
-            <div class="section-label light">
-                RSVP
-            </div>
+        <h2>Konfirmasi Kehadiran</h2>
 
-            <h2>
-                Konfirmasi Kehadiran
-            </h2>
+        <p>
+          Kehadiran dan doa restu Bapak/Ibu/Saudara/i merupakan kebahagiaan bagi
+          keluarga kami.
+        </p>
 
-            <p>
-                Kehadiran dan doa restu Bapak/Ibu/Saudara/i
-                merupakan kebahagiaan bagi keluarga kami.
-            </p>
+        <a
+          href="https://wa.me/6285893144352?text=Assalamu%27alaikum%2C%20saya%20ingin%20mengonfirmasi%20kehadiran%20pada%20acara%20Walimatul%20Khitan%20Tirta%20Jaya."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-button"
+        >
+          <span>💬</span>
+          Konfirmasi via WhatsApp
+        </a>
+      </section>
 
-            <a
-                href="https://wa.me/6285893144352?text=Assalamu%27alaikum%2C%20saya%20ingin%20mengonfirmasi%20kehadiran%20pada%20acara%20Walimatul%20Khitan%20Ahmad%20Rizky."
-                target="_blank"
-                class="whatsapp-button">
-
-                <span>💬</span>
-                Konfirmasi via WhatsApp
-
-            </a>
-
-        </section>
-
-
-        <!-- =====================================
+      <!-- =====================================
              CLOSING
         ====================================== -->
 
-        <section class="section closing reveal">
+      <section class="section closing reveal">
+        <div class="closing-ornament">✦</div>
 
-            <div class="closing-ornament">
-                ✦
-            </div>
+        <p class="arabic">جَزَاكُمُ اللَّهُ خَيْرًا</p>
 
-            <p class="arabic">
-                جَزَاكُمُ اللَّهُ خَيْرًا
-            </p>
+        <h2>Terima Kasih</h2>
 
-            <h2>
-                Terima Kasih
-            </h2>
+        <p>
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+          Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+        </p>
 
-            <p>
-                Merupakan suatu kehormatan dan kebahagiaan
-                bagi kami apabila Bapak/Ibu/Saudara/i
-                berkenan hadir dan memberikan doa restu.
-            </p>
-
-            <p class="wassalam">
-                Wassalamu'alaikum Warahmatullahi Wabarakatuh
-            </p>
-
-        </section>
-
+        <p class="wassalam">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+      </section>
     </main>
-
 
     <!-- =========================================
          FOOTER
     ========================================== -->
 
     <footer>
+      <div class="footer-ornament">✦</div>
 
-        <div class="footer-ornament">
-            ✦
-        </div>
+      <p>Walimatul Khitan</p>
 
-        <p>
-            Walimatul Khitan
-        </p>
+      <strong> Tirta Jaya </strong>
 
-        <strong>
-            Tirta Jaya
-        </strong>
-
-        <small>
-            © 2026 — With love from our family
-        </small>
-
+      <small> © 2026 — With love from our family </small>
     </footer>
-
 
     <!-- JAVASCRIPT -->
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
